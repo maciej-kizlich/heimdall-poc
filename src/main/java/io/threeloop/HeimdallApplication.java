@@ -17,11 +17,11 @@ public class HeimdallApplication {
 @RestController
 class MessageRestController {
 
-	@Value("${spring.application.name}")
+	@Value("${heimdall.application.name}")
 	private String message;
 
 	@RequestMapping("/hello")
 	String msg() {
-		return "application instance spawned for:" + this.message;
+		return "application instance spawned for: " + this.message;
 	}
 }
